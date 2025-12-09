@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Color Cycle</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #hello { font-size: 28px; }
+    </style>
+    </head>
+    <body>
+        <div id="hello"> Hello World</div>
+        <script>
+            $(function(){
+                const colors = ['black','blue','green'];
+                let i=0;
+                setInterval(function(){
+                    $('#hello').css('color', colors[i]);
+                    i = (i+1) % colors.length;
+                },1000);
+            });
+        </script>
+    </body>
+</html>
